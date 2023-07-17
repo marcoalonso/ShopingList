@@ -59,7 +59,7 @@ struct ContentView: View {
                         
                        
                     }///HStack
-                }
+                }.onDelete(perform: borrar)
             }
             .navigationTitle("ShopingList")
             .toolbar {
@@ -78,6 +78,17 @@ struct ContentView: View {
         }
     }
 
+    func borrar(_ articulos: IndexSet) {
+        for articulo in articulos {
+            let articuloEliminar = compras[articulo]
+            self.viewContext.delete(articuloEliminar)
+        }
+        do {
+            try self.viewContext.save()
+        } catch {
+            print("Debug: error \(error.localizedDescription)")
+        }
+    }
 }
 
 private let itemFormatter: DateFormatter = {
