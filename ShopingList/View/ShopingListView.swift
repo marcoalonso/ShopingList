@@ -7,9 +7,11 @@
 
 import SwiftUI
 import CoreData
+import PhotosUI
 
-struct ContentView: View {
+struct ShopingListView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Compras.fecha, ascending: true)],
@@ -49,6 +51,13 @@ struct ContentView: View {
                         }
                         .strikethrough(compra.comprado ? true : false)
                         
+                        if let data = compra.imagen {
+                            let imagenProducto = UIImage(data: data)
+                            Image(uiImage: (imagenProducto ?? UIImage(named: "coffee"))!)
+                                .resizable()
+                                .frame(width: 50, height: 50, alignment: .center)
+                        }
+                        
                         Spacer()
                         
                         if compra.comprado {
@@ -61,6 +70,7 @@ struct ContentView: View {
                     }///HStack
                 }.onDelete(perform: borrar)
             }
+            
             .navigationTitle("ShopingList")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -91,15 +101,9 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ShopingListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

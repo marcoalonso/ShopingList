@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C52A5852A65FFFB00310E44 /* SelectImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52A5842A65FFFB00310E44 /* SelectImageViewModel.swift */; };
 		6C7A7CF92A658637002BFFC3 /* ShopingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7A7CF82A658637002BFFC3 /* ShopingListApp.swift */; };
-		6C7A7CFB2A658637002BFFC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7A7CFA2A658637002BFFC3 /* ContentView.swift */; };
+		6C7A7CFB2A658637002BFFC3 /* ShopingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7A7CFA2A658637002BFFC3 /* ShopingListView.swift */; };
 		6C7A7CFD2A658638002BFFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7A7CFC2A658638002BFFC3 /* Assets.xcassets */; };
 		6C7A7D002A658638002BFFC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7A7CFF2A658638002BFFC3 /* Preview Assets.xcassets */; };
 		6C7A7D022A658638002BFFC3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7A7D012A658638002BFFC3 /* Persistence.swift */; };
@@ -19,9 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C52A5842A65FFFB00310E44 /* SelectImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageViewModel.swift; sourceTree = "<group>"; };
 		6C7A7CF52A658637002BFFC3 /* ShopingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7A7CF82A658637002BFFC3 /* ShopingListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListApp.swift; sourceTree = "<group>"; };
-		6C7A7CFA2A658637002BFFC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6C7A7CFA2A658637002BFFC3 /* ShopingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListView.swift; sourceTree = "<group>"; };
 		6C7A7CFC2A658638002BFFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C7A7CFF2A658638002BFFC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6C7A7D012A658638002BFFC3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -42,6 +44,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C52A5832A65FFF000310E44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C52A5842A65FFFB00310E44 /* SelectImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6C52A5862A66001C00310E44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C7A7CFA2A658637002BFFC3 /* ShopingListView.swift */,
+				6C7A7D0F2A658980002BFFC3 /* AgregarArticuloView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6C7A7CEC2A658637002BFFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				6C7A7CF82A658637002BFFC3 /* ShopingListApp.swift */,
-				6C7A7CFA2A658637002BFFC3 /* ContentView.swift */,
+				6C52A5832A65FFF000310E44 /* ViewModel */,
+				6C52A5862A66001C00310E44 /* View */,
 				6C7A7CFC2A658638002BFFC3 /* Assets.xcassets */,
 				6C7A7D012A658638002BFFC3 /* Persistence.swift */,
 				6C7A7D032A658638002BFFC3 /* ShopingList.xcdatamodeld */,
 				6C7A7CFE2A658638002BFFC3 /* Preview Content */,
-				6C7A7D0F2A658980002BFFC3 /* AgregarArticuloView.swift */,
 			);
 			path = ShopingList;
 			sourceTree = "<group>";
@@ -155,7 +174,8 @@
 				6C7A7D102A658980002BFFC3 /* AgregarArticuloView.swift in Sources */,
 				6C7A7D052A658638002BFFC3 /* ShopingList.xcdatamodeld in Sources */,
 				6C7A7D022A658638002BFFC3 /* Persistence.swift in Sources */,
-				6C7A7CFB2A658637002BFFC3 /* ContentView.swift in Sources */,
+				6C52A5852A65FFFB00310E44 /* SelectImageViewModel.swift in Sources */,
+				6C7A7CFB2A658637002BFFC3 /* ShopingListView.swift in Sources */,
 				6C7A7CF92A658637002BFFC3 /* ShopingListApp.swift in Sources */,
 				6C7A7D0E2A6586BE002BFFC3 /* Compras+CoreDataProperties.swift in Sources */,
 				6C7A7D0D2A6586BE002BFFC3 /* Compras+CoreDataClass.swift in Sources */,

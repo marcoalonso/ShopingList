@@ -20,6 +20,7 @@ extension Compras {
     @NSManaged public var comprado: Bool
     @NSManaged public var fecha: Date?
     @NSManaged public var articulo: String?
+    @NSManaged public var imagen: Data?
 
 }
 
